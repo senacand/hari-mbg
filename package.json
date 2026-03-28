@@ -9,7 +9,7 @@
     {
       "name": "hari-mbg-conversion",
       "title": "Hari MBG Conversion",
-      "description": "Converts IDR into Hari MBG currency unit",
+      "description": "Converts IDR into Hari MBG currency unit, and other timings",
       "mode": "view",
       "subtitle": ""
     }
@@ -34,7 +34,7 @@
     "publish": "npx @raycast/api@latest publish",
     "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1"
   },
-  "author": "mentega",
+  "author": "senacand",
   "platforms": [
     "Windows",
     "macOS"
