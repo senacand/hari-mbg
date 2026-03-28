@@ -1,9 +1,6 @@
 name: Create dist build
 
 on:
-  push:
-    branches:
-      - master
   workflow_dispatch:
 
 jobs:
@@ -33,18 +30,15 @@ jobs:
       - name: Build with ray CLI
         run: npx ray build -e dist -o ./dist-build
 
-      - name: Create foldered zip
+      - name: Stage output folder
         run: |
           PKG_NAME="${{ steps.pkg.outputs.name }}"
-          mkdir -p /tmp/zip-staging
-          cp -r ./dist-build "/tmp/zip-staging/${PKG_NAME}"
-          cd /tmp/zip-staging
-          zip -r "${PKG_NAME}.zip" "${PKG_NAME}/"
-          mv "${PKG_NAME}.zip" "$GITHUB_WORKSPACE/${PKG_NAME}.zip"
+          mkdir -p ./staging
+          cp -r ./dist-build "./staging/${PKG_NAME}"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.pkg.outputs.name }}
-          path: ${{ steps.pkg.outputs.name }}.zip
+          path: ./staging/
           retention-days: 90
