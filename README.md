@@ -14,5 +14,6 @@ Ekstensi ini bisa mendeteksi input angka dalam bentuk gaya ketikan orang Indones
 
 
 ## Demo
+https://github.com/user-attachments/assets/d824f495-15d1-4ae3-902e-c0a34c4396ec
 
-<video src="docs/MBG.mp4" width="720"></video>
+
