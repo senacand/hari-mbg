@@ -6,10 +6,13 @@ Extension untuk Raycast untuk mengkonversi nominal uang (Rupiah) ke satuan **Har
 
 Referensi: https://x.com/catchmeupco/status/2037414315758952754
 
+Ekstensi ini bisa mendeteksi input angka dalam bentuk gaya ketikan orang Indonesia, seperti "120jt" atau "12,8 triliun".
+
 ## Catatan
 
 1 Hari MBG = Rp 1.200.000.000.000 (1,2 triliun rupiah/hari) ([sumber](https://money.kompas.com/read/2025/09/09/100509626/anggaran-fantastis-mbg-tembus-rp-12-triliun-per-hari))
 
+
 ## Demo
 
-![Demo](docs/MBG.mp4)
+<video src="docs/MBG.mp4" width="720"></video>
