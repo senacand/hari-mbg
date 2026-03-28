@@ -2,11 +2,12 @@ import { List } from "@raycast/api";
 import { useState } from "react";
 import { ResultItem } from "./components/ResultItem";
 import { convert } from "./utils/convert";
+import { parseIdr } from "./utils/parse";
 
 export default function Command() {
   const [input, setInput] = useState("");
 
-  const idr = parseFloat(input.replace(/[,.\s]/g, ""));
+  const idr = parseIdr(input);
   const { compound, decimals } = input.length > 0 && !isNaN(idr) && idr > 0
     ? convert(idr)
     : { compound: null, decimals: [] };
